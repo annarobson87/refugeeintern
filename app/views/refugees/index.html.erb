@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Refugees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Country</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @refugees.each do |refugee| %>
+      <tr>
+        <td><%= refugee.first_name %></td>
+        <td><%= refugee.last_name %></td>
+        <td><%= refugee.country %></td>
+        <td><%= refugee.user %></td>
+        <td><%= link_to 'Show', refugee %></td>
+        <td><%= link_to 'Edit', edit_refugee_path(refugee) %></td>
+        <td><%= link_to 'Destroy', refugee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Refugee', new_refugee_path %>

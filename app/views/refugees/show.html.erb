@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @refugee.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @refugee.last_name %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @refugee.country %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @refugee.user %>
+</p>
+
+<%= link_to 'Edit', edit_refugee_path(@refugee) %> |
+<%= link_to 'Back', refugees_path %>
